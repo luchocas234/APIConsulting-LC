@@ -14,6 +14,11 @@
 		4D7CC8D9298401E800217DA4 /* APIConsulting_LC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC8D7298401E800217DA4 /* APIConsulting_LC.xcdatamodeld */; };
 		4D7CC8DB298401EA00217DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CC8DA298401EA00217DA4 /* Assets.xcassets */; };
 		4D7CC8DE298401EA00217DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CC8DC298401EA00217DA4 /* LaunchScreen.storyboard */; };
+		4D7CC8E72984033300217DA4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D7CC8E62984033300217DA4 /* Alamofire */; };
+		4D7CC8E92984034100217DA4 /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC8E82984034100217DA4 /* NetworkingProvider.swift */; };
+		4D7CC8ED298404F000217DA4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC8EC298404EF00217DA4 /* User.swift */; };
+		4D7CC8F02984162900217DA4 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC8EF2984162900217DA4 /* Decoder.swift */; };
+		4D7CC8F22984245A00217DA4 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC8F12984245A00217DA4 /* NewUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,10 @@
 		4D7CC8DA298401EA00217DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D7CC8DD298401EA00217DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D7CC8DF298401EA00217DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7CC8E82984034100217DA4 /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		4D7CC8EC298404EF00217DA4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4D7CC8EF2984162900217DA4 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		4D7CC8F12984245A00217DA4 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7CC8E72984033300217DA4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +71,7 @@
 				4D7CC8CE298401E800217DA4 /* AppDelegate.swift */,
 				4D7CC8D0298401E800217DA4 /* SceneDelegate.swift */,
 				4D7CC8D2298401E800217DA4 /* ViewController.swift */,
+				4D7CC8EA298404D500217DA4 /* NetWork */,
 				4D7CC8D4298401E800217DA4 /* Main.storyboard */,
 				4D7CC8DA298401EA00217DA4 /* Assets.xcassets */,
 				4D7CC8DC298401EA00217DA4 /* LaunchScreen.storyboard */,
@@ -68,6 +79,33 @@
 				4D7CC8D7298401E800217DA4 /* APIConsulting_LC.xcdatamodeld */,
 			);
 			path = "APIConsulting-LC";
+			sourceTree = "<group>";
+		};
+		4D7CC8EA298404D500217DA4 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				4D7CC8EE2984161000217DA4 /* Decoder */,
+				4D7CC8EB298404E300217DA4 /* Data */,
+				4D7CC8E82984034100217DA4 /* NetworkingProvider.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		4D7CC8EB298404E300217DA4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4D7CC8EC298404EF00217DA4 /* User.swift */,
+				4D7CC8F12984245A00217DA4 /* NewUser.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4D7CC8EE2984161000217DA4 /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				4D7CC8EF2984162900217DA4 /* Decoder.swift */,
+			);
+			path = Decoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +124,9 @@
 			dependencies = (
 			);
 			name = "APIConsulting-LC";
+			packageProductDependencies = (
+				4D7CC8E62984033300217DA4 /* Alamofire */,
+			);
 			productName = "APIConsulting-LC";
 			productReference = 4D7CC8CB298401E800217DA4 /* APIConsulting-LC.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 4D7CC8C2298401E800217DA4;
+			packageReferences = (
+				4D7CC8E52984033300217DA4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4D7CC8CC298401E800217DA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -142,8 +186,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7CC8D3298401E800217DA4 /* ViewController.swift in Sources */,
+				4D7CC8F22984245A00217DA4 /* NewUser.swift in Sources */,
 				4D7CC8CF298401E800217DA4 /* AppDelegate.swift in Sources */,
+				4D7CC8ED298404F000217DA4 /* User.swift in Sources */,
 				4D7CC8D1298401E800217DA4 /* SceneDelegate.swift in Sources */,
+				4D7CC8F02984162900217DA4 /* Decoder.swift in Sources */,
+				4D7CC8E92984034100217DA4 /* NetworkingProvider.swift in Sources */,
 				4D7CC8D9298401E800217DA4 /* APIConsulting_LC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D7CC8E52984033300217DA4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D7CC8E62984033300217DA4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D7CC8E52984033300217DA4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4D7CC8D7298401E800217DA4 /* APIConsulting_LC.xcdatamodeld */ = {
