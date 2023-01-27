@@ -53,39 +53,95 @@
                                     <action selector="addNewUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLH-1h-2Q0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvI-oM-qbG">
+                                <rect key="frame" x="16" y="300" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Editar Usuario"/>
+                                <connections>
+                                    <action selector="editUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jay-ks-EvU"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bT3-56-BGh">
+                                <rect key="frame" x="20" y="129" width="287" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="POD-yj-bcC"/>
+                                    <action selector="inputNameAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="tFh-Mu-fqY"/>
+                                    <action selector="touchOutAction:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="EL4-fs-3ek"/>
+                                </connections>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-B0-lXG">
+                                <rect key="frame" x="317" y="146" width="59" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="aceptarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ptG-rp-j6S"/>
+                                    <action selector="cancelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crQ-Ug-z1k"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spM-QF-va8">
+                                <rect key="frame" x="314.33333333333331" y="125" width="61.666666666666686" height="26"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Aceptar" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="aceptarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jR-VE-pFj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RuL-rO-xXO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="15z-ya-pUd"/>
                             <constraint firstItem="hSA-jz-a2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="41p-yY-hHJ"/>
+                            <constraint firstItem="jyQ-B0-lXG" firstAttribute="top" secondItem="spM-QF-va8" secondAttribute="bottom" constant="-5" id="42U-9U-iio"/>
+                            <constraint firstItem="RvI-oM-qbG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4G0-v2-EAF"/>
                             <constraint firstItem="lrt-y4-Ixe" firstAttribute="top" secondItem="QNV-bz-eSn" secondAttribute="bottom" constant="20" id="5bx-lV-mUn"/>
                             <constraint firstItem="hSA-jz-a2G" firstAttribute="top" secondItem="JbB-CZ-VgN" secondAttribute="bottom" constant="20" id="7vL-KV-ZDH"/>
                             <constraint firstItem="JbB-CZ-VgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CQx-Jw-XeN"/>
                             <constraint firstItem="Qxq-Fg-1Ha" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EVP-pd-aJ0"/>
                             <constraint firstItem="lrt-y4-Ixe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Feq-uu-39N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RvI-oM-qbG" secondAttribute="trailing" constant="16" id="HlR-OF-gAq"/>
                             <constraint firstItem="JbB-CZ-VgN" firstAttribute="top" secondItem="RuL-rO-xXO" secondAttribute="bottom" constant="20" id="MaR-kv-2b5"/>
                             <constraint firstItem="QNV-bz-eSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Onx-cn-nVC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="spM-QF-va8" secondAttribute="trailing" constant="17" id="OsE-Km-Zxf"/>
                             <constraint firstItem="Qxq-Fg-1Ha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ppp-Qg-3pO"/>
+                            <constraint firstItem="spM-QF-va8" firstAttribute="leading" secondItem="bT3-56-BGh" secondAttribute="trailing" constant="7.3333333333333144" id="Te9-ow-1wX"/>
                             <constraint firstItem="RuL-rO-xXO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YbS-ca-1GU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jyQ-B0-lXG" secondAttribute="trailing" constant="17" id="eDy-WM-MvZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lrt-y4-Ixe" secondAttribute="trailing" constant="16" id="flG-C6-0uz"/>
+                            <constraint firstItem="spM-QF-va8" firstAttribute="top" secondItem="RuL-rO-xXO" secondAttribute="bottom" constant="15" id="jaK-gn-Fzx"/>
+                            <constraint firstItem="RvI-oM-qbG" firstAttribute="top" secondItem="lrt-y4-Ixe" secondAttribute="bottom" constant="16" id="jim-63-flR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSA-jz-a2G" secondAttribute="trailing" constant="16" id="kk6-ch-jDV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JbB-CZ-VgN" secondAttribute="trailing" constant="16" id="leZ-0M-hEP"/>
                             <constraint firstItem="QNV-bz-eSn" firstAttribute="top" secondItem="hSA-jz-a2G" secondAttribute="bottom" constant="16" id="ln7-KZ-7Ri"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNV-bz-eSn" secondAttribute="trailing" constant="16" id="vZB-ng-BgI"/>
+                            <constraint firstItem="bT3-56-BGh" firstAttribute="top" secondItem="RuL-rO-xXO" secondAttribute="bottom" constant="19" id="vo9-2z-Pqr"/>
+                            <constraint firstItem="jyQ-B0-lXG" firstAttribute="leading" secondItem="bT3-56-BGh" secondAttribute="trailing" constant="10" id="wSb-XU-fQD"/>
+                            <constraint firstItem="bT3-56-BGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wiX-wO-XmD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RuL-rO-xXO" secondAttribute="trailing" constant="16" id="yZf-by-OZQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Qxq-Fg-1Ha" id="8yx-Du-mEc"/>
+                        <outlet property="buttonAceptar" destination="spM-QF-va8" id="J0U-Ue-F2S"/>
+                        <outlet property="buttonAddNewUser" destination="lrt-y4-Ixe" id="n8w-dd-mAy"/>
+                        <outlet property="buttonBorrarName" destination="jyQ-B0-lXG" id="ctE-RS-bEz"/>
+                        <outlet property="buttonEditar" destination="RvI-oM-qbG" id="886-jB-CGa"/>
+                        <outlet property="buttonGetUser" destination="RuL-rO-xXO" id="7Uq-ua-acL"/>
                         <outlet property="emailLabel" destination="hSA-jz-a2G" id="6zE-Gm-3mq"/>
                         <outlet property="idLabel" destination="QNV-bz-eSn" id="NA1-sw-ary"/>
+                        <outlet property="inputName" destination="bT3-56-BGh" id="zoe-cL-406"/>
                         <outlet property="nameLabel" destination="JbB-CZ-VgN" id="yC5-EZ-ofg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="-2"/>
+            <point key="canvasLocation" x="20.610687022900763" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

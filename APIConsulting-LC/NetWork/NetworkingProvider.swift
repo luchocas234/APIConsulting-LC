@@ -21,11 +21,11 @@ final class NetworkingProvider{
     
     func getUser(id: Int, success: @escaping (_ user: User) -> (), failure: @escaping (_ error: Error?) -> ()) {
 
-        let url = "\(kBaseURL)users/\(id)"
+        let url = "\(kBaseURL2)users/\(id)"
         
-        AF.request(url, method: .get).validate(statusCode: kStatusOk).responseDecodable (of: UserResponse.self) {  response in
+        AF.request(url, method: .get).validate(statusCode: kStatusOk).responseDecodable (of: User.self) {  response in
             
-            if let user = response.value?.data {
+            if let user = response.value, user.id != nil {
                 success(user)
             } else {
                 failure(response.error)
@@ -49,5 +49,26 @@ final class NetworkingProvider{
             
         }
     }
+    
+    func updateUser(user: NewUser,id: Int, success: @escaping (_ user: User) -> (), failure: @escaping (_ error: Error?) -> ()){
+        
+        let url = "\(kBaseURL2)users/\(id)"
+        let headers: HTTPHeaders = [.authorization(bearerToken: apiToken)]
+        
+        AF.request(url, method: .put, parameters: user, encoder: JSONParameterEncoder.default, headers: headers).validate(statusCode: kStatusOk).responseDecodable (of: User.self) {  response in
+            
+            if let user = response.value, user.id != nil {
+                print(user)
+                success(user)
+            } else {
+                
+                failure(response.error)
+            }
+            
+        }
+        
+        
+    }
+    
     
 }
